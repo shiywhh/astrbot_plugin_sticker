@@ -1,17 +1,10 @@
 from astrbot.api.event import filter, AstrMessageEvent
-from astrbot.api.star import Context, Star, register
+from astrbot.api.star import Context, Star
 from astrbot.api.message_components import Image
 import os
 import random
 
 
-@register(
-    "astrbot_plugin_sticker",
-    "shiywhh",
-    "doro、capoo、cheshire、chiikawa四大表情包发送",
-    "1.0.0",
-    "https://github.com/shiywhh/astrbot_plugin_sticker"
-)
 class StickerPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)
