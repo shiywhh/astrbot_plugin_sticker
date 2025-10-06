@@ -92,7 +92,7 @@ class StickerPlugin(Star):
             yield event.plain_result("冷却时间必须大于 0。")
             return
         self.cd = cd
-        yield event.plain_result(f"指令冷却时间已设置为 {cd} 秒。")
+        yield event.plain_result(f"表情包指令冷却时间已设置为 {cd} 秒。")
 
     @filter.command("stkhelp")
     async def stkhelp(self, event: AstrMessageEvent):
