@@ -5,11 +5,11 @@ import os
 import random
 
 @register(
-    "astrbot_plugin_doro_today",
-    "Futureppo",
-    "今天doro是什么结局？",
+    "astrbot_plugin_sticker",
+    "shiywhh",
+    "doro、capoo、cheshire、chiikawa四大表情包发送",
     "1.0.0",
-    "https://github.com/your-repo/astrbot_plugin_doro_today"
+    "https://github.com/shiywhh/astrbot_plugin_sticker"
 )
 class StickerPlugin(Star):
     def __init__(self, context: Context):
@@ -33,21 +33,25 @@ class StickerPlugin(Star):
         yield event.chain_result([Image.fromFileSystem(image_path)])
 
     @filter.command("doro", alias={'Doro'})
-    async def dorotoday(self, event: AstrMessageEvent):
+    async def doro(self, event: AstrMessageEvent):
         '''随机抽取一张doro并发送'''
-        await self._send_random_image(event, "doro")
+        async for result in self._send_random_image(event, "doro"):
+            return result
 
     @filter.command("capoo", alias={'Capoo', '猫猫虫', '咖波', '西诶批欧欧', '🐷🐷虫'})
-    async def capootoday(self, event: AstrMessageEvent):
+    async def capoo(self, event: AstrMessageEvent):
         '''随机抽取一张capoo并发送'''
-        await self._send_random_image(event, "capoo")
+        async for result in self._send_random_image(event, "capoo"):
+            return result
 
     @filter.command("cheshire", alias={'Cheshire', '柴郡'})
-    async def cheshiretoday(self, event: AstrMessageEvent):
+    async def cheshire(self, event: AstrMessageEvent):
         '''随机抽取一张cheshire并发送'''
-        await self._send_random_image(event, "cheshire")
+        async for result in self._send_random_image(event, "cheshire"):
+            return result
 
     @filter.command("chiikawa", alias={'Chiikawa', '乌萨奇'})
-    async def chiikawatoday(self, event: AstrMessageEvent):
+    async def chiikawa(self, event: AstrMessageEvent):
         '''随机抽取一张chiikawa并发送'''
-        await self._send_random_image(event, "chiikawa")
+        async for result in self._send_random_image(event, "chiikawa"):
+            return result
