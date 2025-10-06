@@ -95,7 +95,7 @@ class StickerPlugin(Star):
         yield event.plain_result(f"指令冷却时间已设置为 {cd} 秒。")
 
     @filter.command("stkhelp")
-    async def setu_help(self, event: AstrMessageEvent):
+    async def stkhelp(self, event: AstrMessageEvent):
         help_text = """
     **表情包插件帮助**
 
