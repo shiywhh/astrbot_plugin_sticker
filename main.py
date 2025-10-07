@@ -1,10 +1,12 @@
 from astrbot.api.event import filter, AstrMessageEvent
+from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
+    AiocqhttpMessageEvent,
+)
 from astrbot.api.star import Context, Star
 from astrbot.api.message_components import Image
 import os
 import random
 import time
-
 
 class StickerPlugin(Star):
     def __init__(self, context: Context):
@@ -16,7 +18,7 @@ class StickerPlugin(Star):
         """检查用户是否在冷却中，返回True表示可以执行，False表示冷却中"""
         user_id = event.get_sender_id()
         now = time.time()
-
+        
         if user_id in self.last_usage and (now - self.last_usage[user_id]) < self.cd:
             return False
         return True
@@ -48,16 +50,16 @@ class StickerPlugin(Star):
             yield event.plain_result(f"{sticker_type}文件夹不存在，请检查插件目录")
             return
 
-        image_files = [f for f in os.listdir(folder)
-                       if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
-
+        image_files = [f for f in os.listdir(folder) 
+                      if f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+        
         if not image_files:
             yield event.plain_result(f"{sticker_type}文件夹中没有图片")
             return
 
         random_image = random.choice(image_files)
         image_path = os.path.join(folder, random_image)
-
+        
         # 更新冷却时间
         self._update_cd(event)
         yield event.chain_result([Image.fromFileSystem(image_path)])
@@ -85,7 +87,7 @@ class StickerPlugin(Star):
         '''随机抽取一张chiikawa并发送'''
         async for result in self._send_sticker(event, "chiikawa"):
             yield result
-
+            
     @filter.command("stkcd")
     async def set_sticker_cd(self, event: AstrMessageEvent, cd: int):
         if cd <= 0:
@@ -93,25 +95,23 @@ class StickerPlugin(Star):
             return
         self.cd = cd
         yield event.plain_result(f"表情包指令冷却时间已设置为 {cd} 秒。")
-
+        
     @filter.command("stkhelp")
-    async def stkhelp(self, event: AstrMessageEvent):
-        help_text = """
-    **表情包插件帮助**
-
-    **可用指令:**
-	   - **doro指令**：`/doro`、`/Doro`
-	   - **capoo指令**：`/capoo`、`/Capoo`、`/咖波`、`/猫猫虫`、`/西诶批欧欧`、`/🐷🐷虫`
-	   - **cheshire指令**：`/cheshire`、`/Cheshire`、`/柴郡`
-	   - **chiikawa指令**：`/chiikawa`、`/Chiikawa`、`/乌萨奇`
-
-
-    **使用方法:**
-       - 直接发送对应即可获取一张对应人物表情包。
-       - 使用 `/stkcd <int>` 将冷却时间设置为 <int> 秒。
-
-    **注意:**
-       - 冷却时间默认为 10 秒。
-       - 图片需人工储存至插件目录中。
-        """
-        yield event.plain_result(help_text)
+    async def stkhelp(self, event: AiocqhttpMessageEvent):
+        help_text = (
+          "#【表情包插件帮助】(指令前缀以bot配置为准)\n\n"
+          "## 表情包指令\n"
+          "- doro指令：'/doro'、'/Doro'\n"
+          "- capoo指令：'/capoo'、'/Capoo'、'/咖波'、'/猫猫虫'、'/西诶批欧欧'、'/🐷🐷虫'\n"
+          "- cheshire指令：'/cheshire'、'/Cheshire'、'/柴郡'\n"
+          "- chiikawa指令：'/chiikawa'、'/Chiikawa'、'/乌萨奇'\n\n"
+          "## 使用方法\n"
+          "- 直接发送对应指令即可获取一张对应人物表情包。\n"
+          "- 使用 '/stkcd <int>' 将冷却时间设置为 <int> 秒。\n\n"
+          "## 注意事项\n"
+          "- 冷却时间默认为 10 秒。\n"
+          "- 图片需人工储存至插件目录中。\n"
+          )
+        url = await self.text_to_image(help_text)
+        yield event.image_result(url)
+        
