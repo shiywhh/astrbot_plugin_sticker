@@ -88,7 +88,7 @@ class StickerPlugin(Star):
         async for result in self._send_sticker(event, "chiikawa"):
             yield result
 
-    @filter.command("meme", alias={'猫meme'})
+    @filter.command("meme", alias={'猫meme', 'Meme'})
     async def meme(self, event: AstrMessageEvent):
         '''随机抽取一张meme并发送'''
         async for result in self._send_sticker(event, "meme"):
@@ -108,9 +108,10 @@ class StickerPlugin(Star):
           "#【表情包插件帮助】(指令前缀以bot配置为准)\n\n"
           "## 表情包指令\n"
           "- doro指令：'/doro'、'/Doro'\n"
-          "- capoo指令：'/capoo'、'/Capoo'、'/咖波'、'/猫猫虫'、'/西诶批欧欧'、'/🐷🐷虫'\n"
+          "- capoo指令：'/capoo'、'/Capoo'、'/咖波'、'/猫猫虫'、'/西诶批欧欧'、'/🐷🐷虫'、'/mmc'\n"
           "- cheshire指令：'/cheshire'、'/Cheshire'、'/柴郡'\n"
-          "- chiikawa指令：'/chiikawa'、'/Chiikawa'、'/乌萨奇'\n\n"
+          "- chiikawa指令：'/chiikawa'、'/Chiikawa'、'/乌萨奇'\n"
+          "- meme指令：'/meme'、'/Meme'、'/猫meme'\n\n"
           "## 使用方法\n"
           "- 直接发送对应指令即可获取一张对应人物表情包。\n"
           "- 使用 '/stkcd <int>' 将冷却时间设置为 <int> 秒。\n\n"

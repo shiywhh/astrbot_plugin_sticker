@@ -20,10 +20,10 @@
 - **随机抽取图片**：从插件目录下相应人物的文件夹中随机抽取一张图片。
 - **使用**：
 	- **doro指令**：`/doro`、`/Doro`
-	- **capoo指令**：`/capoo`、`/Capoo`、`/咖波`、`/猫猫虫`、`/西诶批欧欧`、`/🐷🐷虫`
+	- **capoo指令**：`/capoo`、`/Capoo`、`/咖波`、`/猫猫虫`、`/西诶批欧欧`、`/🐷🐷虫`、`/mmc`
 	- **cheshire指令**：`/cheshire`、`/Cheshire`、`/柴郡`
 	- **chiikawa指令**：`/chiikawa`、`/Chiikawa`、`/乌萨奇`
-    - **meme**： `/meme`、`/Meme`、`/猫meme`
+    - **meme指令**： `/meme`、`/Meme`、`/猫meme`
 
 ***
 
