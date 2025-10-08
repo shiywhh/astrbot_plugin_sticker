@@ -11,7 +11,7 @@
 
 # 🐱 astrbot_plugin_sticker
 
-一个AstrBot插件，可以从doro、capoo、cheshire、chiikawa四大表情包图片中随机抽取一张并发送给用户。
+一个AstrBot插件，可以从doro、capoo、cheshire、chiikawa、meme五大表情包图片中随机抽取一张并发送给用户。
 
 ***
 
@@ -23,6 +23,7 @@
 	- **capoo指令**：`/capoo`、`/Capoo`、`/咖波`、`/猫猫虫`、`/西诶批欧欧`、`/🐷🐷虫`
 	- **cheshire指令**：`/cheshire`、`/Cheshire`、`/柴郡`
 	- **chiikawa指令**：`/chiikawa`、`/Chiikawa`、`/乌萨奇`
+    - **meme**： `/meme`、`/Meme`、`/猫meme`
 
 ***
 

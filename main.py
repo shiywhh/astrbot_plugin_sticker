@@ -70,7 +70,7 @@ class StickerPlugin(Star):
         async for result in self._send_sticker(event, "doro"):
             yield result
 
-    @filter.command("capoo", alias={'Capoo', '猫猫虫', '咖波', '西诶批欧欧', '🐷🐷虫'})
+    @filter.command("capoo", alias={'Capoo', '猫猫虫', '咖波', '西诶批欧欧', '🐷🐷虫', 'mmc'})
     async def capoo(self, event: AstrMessageEvent):
         '''随机抽取一张capoo并发送'''
         async for result in self._send_sticker(event, "capoo"):
@@ -87,7 +87,13 @@ class StickerPlugin(Star):
         '''随机抽取一张chiikawa并发送'''
         async for result in self._send_sticker(event, "chiikawa"):
             yield result
-            
+
+    @filter.command("meme", alias={'猫meme'})
+    async def meme(self, event: AstrMessageEvent):
+        '''随机抽取一张meme并发送'''
+        async for result in self._send_sticker(event, "meme"):
+            yield result
+
     @filter.command("stkcd")
     async def set_sticker_cd(self, event: AstrMessageEvent, cd: int):
         if cd <= 0:
