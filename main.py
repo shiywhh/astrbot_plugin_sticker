@@ -95,7 +95,7 @@ class StickerPlugin(Star):
             yield result
 
     @filter.command("艾露猫", alias={'呆猫', '呆喵'})
-    async def meme(self, event: AstrMessageEvent):
+    async def ailucat(self, event: AstrMessageEvent):
         '''随机抽取一张艾露猫并发送'''
         async for result in self._send_sticker(event, "ailucat"):
             yield result

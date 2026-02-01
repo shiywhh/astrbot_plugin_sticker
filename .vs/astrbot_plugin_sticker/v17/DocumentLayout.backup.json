@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\metadata.yaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:metadata.yaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +30,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -43,7 +43,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "metadata.yaml",
               "DocumentMoniker": "C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\metadata.yaml",
               "RelativeDocumentMoniker": "metadata.yaml",
@@ -56,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.py",
               "DocumentMoniker": "C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\main.py",
               "RelativeDocumentMoniker": "main.py",
               "ToolTip": "C:\\Users\\Eleven\\Desktop\\astrbot_plugin_sticker\\main.py",
               "RelativeToolTip": "main.py",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAQwGMAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAQwIIAAAAIAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMOSURBVEhLrZXBT2NVFIe/e98rPrStjBRoxhoxLtSoiRh14mgi8wfwBzQ0YaELFiazImEkJhB0AqEL2MjChQsWuCNduHAFSUlwgaZRxjKmphMZldASn/TRx0jb46K0vD6GaarzJScv955zz\u002B\u002Be\u002B965T5F2bqLUxyAmnWGHlDNdei\u002Ba8juaiIhi03EBy\u002B9rR0gfEzKcyhV19Padd4Yyfn8DxaYj/sl2nCUnrEt0GQfOT93b34viLI\u002B6j/Apr9y6B6B9a9viTR7WJfpUNfhS9ZkPgOG6SQLFbCP\u002BYgXvB1uGHbN7G2CDlz\u002B5wX\u002BpoFMuFUin0\u002BTzebLZLKurq0SjUQDGxsZIp9Nks1mWl5cJBh9d8aUCsViMyclJRkZGsCyLhYUFRkdHSSaTJJNJ4vE4g4ODrKystKx7Qbkt40sFGlQqFU5OTgBIJBLMzc2RSqXIZDLE43GWlpZa4m9Zdwhofm\u002BMHymwuLjI\u002Bvo6lmUxMTFBNBrFtu2m37ZtNjY2Wta8GdgnFfqmdD6z6UiLgQCSz\u002BdleHi4OQZkdnZWtra2JBgMCiBTU1OytrbWEnN3/3X58\u002BD5078Onn2DdhX4mZmZIZfLUSgU2NvbY3x8nPn5\u002BZaYsC7RrR6YSlW\u002BEsFs6YOQPqZ0fQDOXnKxWGyev5eenh5isRg7Ozt\u002BF3ah/rUBKJhuCjQ69I9rL3rjO8YrgFDUCPe97f9YUUR02Dj\u002BKGQ4TuNuedzoo\u002BsD3/Z3HT1nmYXpgHFY9Qf8XzRAZmjIznRvX9t98gej4RCRh1qneD7T2o0H0syPUuqh1ikeAWW6Hf8123O\u002Bpd3bp4AZVv8Q0S4R5XqeZSLa5VXjkNfMAr2\u002BC\u002B0ylKJyoZPLEqAsJmVMymLiYuJKAFdM7lXDfHd6lR\u002Br/fxde4KqZ38XkRpw0ytQA6igmgldqYvUxQJN0cOaxW\u002B1MIXaU1QwbGAb\u002BFqUfKZQCaXlXX1qDDwd2f/ifAs/f/4lhv4QEdVFrX48ukxEufQqt9Sny3f7tJvr1Se5Xu3u9mv31ys1J/fW1V\u002BKnk1e4F9LbFpu\u002BpIkdAAAAABJRU5ErkJggg==",
               "WhenOpened": "2026-02-01T04:16:43.218Z",
               "EditorCaption": ""
