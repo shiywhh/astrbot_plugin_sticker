@@ -94,6 +94,12 @@ class StickerPlugin(Star):
         async for result in self._send_sticker(event, "meme"):
             yield result
 
+    @filter.command("艾露猫", alias={'呆猫', '呆喵'})
+    async def meme(self, event: AstrMessageEvent):
+        '''随机抽取一张艾露猫并发送'''
+        async for result in self._send_sticker(event, "ailucat"):
+            yield result
+            
     @filter.command("stkcd")
     async def set_sticker_cd(self, event: AstrMessageEvent, cd: int):
         if cd <= 0:
@@ -111,7 +117,8 @@ class StickerPlugin(Star):
           "- capoo指令：'/capoo'、'/Capoo'、'/咖波'、'/猫猫虫'、'/西诶批欧欧'、'/🐷🐷虫'、'/mmc'\n"
           "- cheshire指令：'/cheshire'、'/Cheshire'、'/柴郡'\n"
           "- chiikawa指令：'/chiikawa'、'/Chiikawa'、'/乌萨奇'\n"
-          "- meme指令：'/meme'、'/Meme'、'/猫meme'\n\n"
+          "- meme指令：'/meme'、'/Meme'、'/猫meme'\n"
+          "- 艾露猫指令：'/艾露猫'、'/呆猫'、'/呆喵'\n\n"
           "## 使用方法\n"
           "- 直接发送对应指令即可获取一张对应人物表情包。\n"
           "- 使用 '/stkcd <int>' 将冷却时间设置为 <int> 秒。\n\n"
